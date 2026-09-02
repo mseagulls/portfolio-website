@@ -3,12 +3,11 @@ import '@/styles/prism-vsc-dark-plus.css';
 import '@/styles/star.css';
 import '@/styles/tailwind.css';
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import PortfolioHeader from '@/components/Header/PortfolioHeader';
+import PortfolioFooter from '@/components/Footer/PortfolioFooter';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
-import AuthProvider from '../context/AuthContext';
 import ToasterContext from '../context/ToastContext';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -23,22 +22,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={plusJakarta.className}>
-      <body>
+      <body className='bg-brand-black'>
         <div className='isolate'>
           <NextTopLoader
-            color='#8646F4'
+            color='#0D00A4'
             crawlSpeed={300}
             showSpinner={false}
             shadow='none'
           />
 
-          <AuthProvider>
-            <Header />
-            {children}
-            <Footer />
+          <PortfolioHeader />
+          {children}
+          <PortfolioFooter />
 
-            <ToasterContext />
-          </AuthProvider>
+          <ToasterContext />
         </div>
 
         <ScrollToTop />

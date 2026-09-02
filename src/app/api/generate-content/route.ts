@@ -1,15 +1,30 @@
 import OpenAI from "openai";
 
 export async function POST(req: Request) {
-  const body = await req.json();
+  const body = await req.json().catch(() => ({}));
+  const { prompt, apiKey } = body as {
+    prompt?: Array<{ role: "system" | "user" | "assistant"; content: string; name?: string }>;
+    apiKey?: string;
+  };
 
-  const { prompt, apiKey } = body;
+  const resolvedApiKey = apiKey || process.env.OPENAI_API_KEY;
 
-  const openai = new OpenAI({
-    apiKey: apiKey ? apiKey : process.env.OPENAI_API_KEY,
-  });
+  if (!prompt || !Array.isArray(prompt) || (!resolvedApiKey && !apiKey)) {
+    return new Response(
+      JSON.stringify("Add a valid OpenAI API key to generate content."),
+      { status: 400 },
+    );
+  }
+
+  if (!resolvedApiKey) {
+    return new Response(
+      JSON.stringify("The OpenAI API key is not configured for this deployment."),
+      { status: 500 },
+    );
+  }
 
   try {
+    const openai = new OpenAI({ apiKey: resolvedApiKey });
     const chatCompletion = await openai.chat.completions.create({
       messages: prompt,
       model: "gpt-3.5-turbo",
@@ -20,9 +35,9 @@ export async function POST(req: Request) {
     });
 
     const generatedContent = chatCompletion.choices[0].message?.content;
-
-    return new Response(JSON.stringify(generatedContent));
+    return new Response(JSON.stringify(generatedContent || "No content generated."));
   } catch (error: any) {
-    return new Response(JSON.stringify(error.error.message), { status: 500 });
+    const message = error?.error?.message || error?.message || "Unknown error";
+    return new Response(JSON.stringify(message), { status: 500 });
   }
 }

@@ -41,7 +41,9 @@ const BlogGridContainer = ({ blogs }: { blogs: Blog[] }) => {
         }
         className='grid grid-cols-1 gap-x-7.5 gap-y-12.5 sm:grid-cols-2 lg:grid-cols-3'
       >
-        {showBlogs?.map((blog, i) => <SingleBlog key={blog._id || i} blog={blog} />)}
+        {showBlogs?.map((blog, i) => (
+          <SingleBlog key={blog._id || i} />
+        ))}
       </InfiniteScroll>
     </div>
   );

@@ -1,6 +1,11 @@
 import SectionTitle from "../Common/SectionTitle";
 import SinglePricing from "./SInglePricing";
-import { pricingData } from "../../../stripe/pricingData";
+
+const pricingData = [
+  { id: "starter", nickname: "Small", unit_amount: 29900 },
+  { id: "pro", nickname: "Medium", unit_amount: 59900 },
+  { id: "business", nickname: "Large", unit_amount: 89900 },
+];
 
 const PricingGrids = () => {
   return (
@@ -12,10 +17,9 @@ const PricingGrids = () => {
           paragraph="Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup."
         />
         <div className="grid grid-cols-1 gap-7.5 sm:grid-cols-2 lg:grid-cols-3">
-          {pricingData &&
-            pricingData.map((price, key) => (
-              <SinglePricing price={price} key={key} />
-            ))}
+          {pricingData.map((price, key) => (
+            <SinglePricing price={price} key={key} />
+          ))}
         </div>
       </div>
     </div>

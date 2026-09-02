@@ -12,7 +12,8 @@ const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
 
-  const { data: session } = useSession();
+  const sessionData = useSession();
+  const session = sessionData?.data ?? null;
 
   const pathUrl = usePathname();
 

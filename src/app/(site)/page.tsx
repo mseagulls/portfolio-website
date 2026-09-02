@@ -1,37 +1,34 @@
-import BlogSection from "@/components/Blog";
-import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Home/Clients";
-import Features from "@/components/Home/Features";
-import FeaturesList from "@/components/Home/FeaturesList";
-import Hero from "@/components/Home/Hero";
-import Reviews from "@/components/Home/Reviews";
-import Newsletter from "@/components/Newsletter";
-import Pricing from "@/components/Pricing";
-import Support from "@/components/Support";
-import { Metadata } from "next";
-import { integrations } from "../../../integrations.config";
+import Hero from '@/components/Portfolio/Hero';
+import About from '@/components/Portfolio/About';
+import Projects from '@/components/Portfolio/Projects';
+import CoreValues from '@/components/Portfolio/CoreValues';
+import InteractiveTerminal from '@/components/Portfolio/InteractiveTerminal';
+import Skills from '@/components/Portfolio/Skills';
+import Experience from '@/components/Portfolio/Experience';
+import Testimonials from '@/components/Portfolio/Testimonials';
+import Contact from '@/components/Portfolio/Contact';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "AI Tool - Next.js Template for AI Tools",
-  description: "This is Home for AI Tool",
-  // other metadata
+  title: 'Micah Peebles | Full Stack Developer & US Army Veteran',
+  description:
+    'Full Stack Developer & US Army Staff Sergeant with 10+ years of military leadership experience. Certified in JavaScript and Web Design. Engineering high-performance Next.js, React, and TypeScript applications.',
+  keywords:
+    'Full Stack Developer, Web Developer, JavaScript, React, Next.js, TypeScript, Army Veteran, Software Engineer, Portfolio',
 };
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <FeaturesList />
-      <Pricing />
-      <section className="relative z-20 overflow-hidden pb-20 pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45">
-        <Reviews />
-      </section>
-      <Clients />
-      <Support />
-      {integrations.isSanityEnabled && <BlogSection />}
-      <CallToAction />
-      <Newsletter />
+      <About />
+      <Projects />
+      <CoreValues />
+      <InteractiveTerminal />
+      <Skills />
+      <Experience />
+      <Testimonials />
+      <Contact />
     </>
   );
 }

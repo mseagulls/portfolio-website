@@ -1,33 +1,11 @@
 "use client";
 
-import axios from "axios";
 import Image from "next/image";
 import OfferItem from "./OfferItem";
-import { integrations, messages } from "../../../integrations.config";
-import toast from "react-hot-toast";
 
 const SinglePricing = ({ price }: any) => {
-  // POST request
   const handleSubscription = async (e: any) => {
     e.preventDefault();
-
-    if (!integrations?.isStripeEnabled) {
-      toast.error(messages.stripe);
-      return;
-    }
-
-    const { data } = await axios.post(
-      "/api/payment",
-      {
-        priceId: price.id,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      },
-    );
-    window.location.assign(data);
   };
 
   return (
