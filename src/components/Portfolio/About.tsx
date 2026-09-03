@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedElement, ScrollText } from '@/components/AnimatedElement';
+import GhostGif from '@/assets/GhostGif.gif';
 
 export default function About() {
   const { ref, isInView } = useScrollAnimation();
@@ -50,7 +51,7 @@ export default function About() {
           variants={containerVariants}
           initial='hidden'
           animate={isInView ? 'visible' : 'hidden'}
-          className='space-y-12'
+          className='relative space-y-12'
         >
           {/* Section Header */}
           <AnimatedElement
@@ -58,9 +59,25 @@ export default function About() {
             direction='up'
             className='space-y-4 text-center'
           >
-            <h2 className='text-brand-blue text-4xl font-bold md:text-5xl'>
-              About Me
-            </h2>
+            <div className='flex items-center justify-center gap-3'>
+              <Image
+                src={GhostGif}
+                alt='Animated ghost illustration'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+              <h2 className='text-brand-blue text-4xl font-bold md:text-5xl'>
+                About Me
+              </h2>
+              <Image
+                src={GhostGif}
+                alt='Animated ghost illustration'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+            </div>
             <div className='from-brand-blue to-brand-navy mx-auto h-1 w-20 bg-gradient-to-r'></div>
           </AnimatedElement>
 
@@ -75,11 +92,10 @@ export default function About() {
               >
                 <p className='text-emerald-50/90'>
                   My journey is one of purpose, discipline, and continuous
-                  growth. I served as a Staff sergeant in the
-                  U.S. Army. As a squad leader of 10-15 soldiers, I managed
-                  equipment valued at over $10 million, and developed critical
-                  skills in operational planning, risk management, and
-                  leadership.
+                  growth. I served as a Staff sergeant in the U.S. Army. As a
+                  squad leader of 10-15 soldiers, I managed equipment valued at
+                  over $10 million, and developed critical skills in operational
+                  planning, risk management, and leadership.
                 </p>
               </ScrollText>
 
@@ -89,9 +105,8 @@ export default function About() {
                 className='text-lg leading-relaxed text-emerald-100/90'
               >
                 <p>
-                  I learned
-                  that excellence isn't optional—it's a requirement. That same
-                  mindset drives my approach to web development. I'm
+                  I learned that excellence isn't optional—it's a requirement.
+                  That same mindset drives my approach to web development. I'm
                   detail-oriented, committed to quality, and always pushing
                   myself to improve.
                 </p>
@@ -103,8 +118,8 @@ export default function About() {
                 className='text-lg leading-relaxed text-emerald-100/90'
               >
                 <p>
-                  Certified as a JavaScript Professional Developer and
-                  HTML-CSS Web Designer, I'm now channeling my passion for
+                  Certified as a JavaScript Professional Developer and HTML-CSS
+                  Web Designer, I'm now channeling my passion for
                   problem-solving into building dynamic, responsive web
                   applications. I bring military precision and leadership
                   experience to every project, treating code like operations—

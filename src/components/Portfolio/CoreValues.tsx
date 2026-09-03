@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedElement } from '@/components/AnimatedElement';
+import MindsetGif from '@/assets/MindsetGif.gif';
 
 interface CoreValue {
   icon: string;
@@ -115,10 +116,26 @@ export default function CoreValues() {
             <span className='bg-brand-blue/20 text-brand-blue border-brand-blue/30 inline-block rounded-full border px-4 py-1.5 text-xs font-semibold tracking-widest uppercase'>
               MILITARY LEADERSHIP × SOFTWARE ENGINEERING
             </span>
-            <h2 className='text-4xl font-bold text-white md:text-5xl'>
-              Core Principles &{' '}
-              <span className='text-brand-blue'>Engineering Mindset</span>
-            </h2>
+            <div className='flex items-center justify-center gap-2 sm:gap-3'>
+              <Image
+                src={MindsetGif}
+                alt='Animated engineering mindset display'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+              <h2 className='text-2xl font-bold text-white sm:text-4xl md:text-5xl'>
+                Core Principles &{' '}
+                <span className='text-brand-blue'>Engineering Mindset</span>
+              </h2>
+              <Image
+                src={MindsetGif}
+                alt='Animated engineering mindset display'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+            </div>
             <p className='mx-auto max-w-3xl text-base text-emerald-50/80 md:text-lg'>
               How 10+ years as a US Army Staff Sergeant and Bradley Commander
               translate into high-performing, resilient software development.

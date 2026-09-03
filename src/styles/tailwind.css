@@ -207,6 +207,14 @@
   scrollbar-width: none; /* Firefox */
 }
 
+@utility glass-panel {
+  @apply rounded-[28px] border border-white/10 bg-white/5 shadow-[0_18px_60px_rgba(2,1,10,0.45)] backdrop-blur-xl;
+}
+
+@utility soft-card {
+  @apply rounded-[24px] border border-white/10 bg-slate-950/40 shadow-[0_12px_30px_rgba(2,1,10,0.28)] backdrop-blur-md;
+}
+
 @utility box-bg {
   background: radial-gradient(
     180px circle at var(--mouse-x) var(--mouse-y),

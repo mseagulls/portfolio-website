@@ -21,10 +21,10 @@ export const AnimatedElement: React.FC<AnimatedElementProps> = ({
   duration = 0.5,
 }) => {
   const directionVariants = {
-    up: { y: 50, opacity: 0 },
-    down: { y: -50, opacity: 0 },
-    left: { x: 50, opacity: 0 },
-    right: { x: -50, opacity: 0 },
+    up: { y: 46, opacity: 0 },
+    down: { y: -46, opacity: 0 },
+    left: { x: 38, opacity: 0 },
+    right: { x: -38, opacity: 0 },
   };
 
   return (
@@ -37,7 +37,10 @@ export const AnimatedElement: React.FC<AnimatedElementProps> = ({
       transition={{
         duration,
         delay,
+        ease: [0.22, 1, 0.36, 1],
       }}
+      whileHover={isVisible ? { y: -4 } : undefined}
+      viewport={{ once: true, amount: 0.2 }}
     >
       {children}
     </motion.div>
@@ -60,12 +63,14 @@ export const ScrollText: React.FC<ScrollTextProps> = ({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0 }}
-      animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+      initial={{ opacity: 0, y: 18 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
       transition={{
         duration: 0.8,
         delay,
+        ease: [0.22, 1, 0.36, 1],
       }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       {children}
     </motion.div>
@@ -88,12 +93,14 @@ export const ParallaxText: React.FC<ParallaxTextProps> = ({
   return (
     <motion.div
       className={className}
-      initial={{ y: 40, opacity: 0 }}
-      animate={isVisible ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+      initial={{ y: 30, opacity: 0 }}
+      animate={isVisible ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
       transition={{
         duration: 0.6,
         delay,
+        ease: [0.22, 1, 0.36, 1],
       }}
+      viewport={{ once: true, amount: 0.25 }}
     >
       {children}
     </motion.div>

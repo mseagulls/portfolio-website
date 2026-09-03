@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Image from 'next/image';
+import WalkGif from '@/assets/WalkGif.gif';
 
 interface CommandOutput {
   id: number;
@@ -267,9 +269,26 @@ export default function InteractiveTerminal() {
             <span className='inline-block rounded-full border border-emerald-500/30 bg-emerald-500/20 px-4 py-1.5 text-xs font-semibold tracking-widest text-emerald-400 uppercase'>
               INTERACTIVE RECRUITER CLI
             </span>
-            <h2 className='text-3xl font-bold text-white md:text-4xl'>
-              Command Center <span className='text-emerald-400'>Terminal</span>
-            </h2>
+            <div className='flex items-center justify-center gap-2 sm:gap-3'>
+              <Image
+                src={WalkGif}
+                alt='Animated figure walking'
+                width={72}
+                height={72}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+              <h2 className='text-3xl font-bold text-white md:text-4xl'>
+                Command Center{' '}
+                <span className='text-emerald-400'>Terminal</span>
+              </h2>
+              <Image
+                src={WalkGif}
+                alt='Animated figure walking'
+                width={72}
+                height={72}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+            </div>
             <p className='mx-auto max-w-xl text-xs text-gray-400 md:text-sm'>
               Test out the interactive terminal below or click quick command
               buttons to query experience, technical skills, and resume details.

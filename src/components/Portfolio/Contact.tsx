@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedElement, ScrollText } from '@/components/AnimatedElement';
 import toast from 'react-hot-toast';
+import ConnectGif from '@/assets/ConnectGif.gif';
 
 export default function Contact() {
   const { ref, isInView } = useScrollAnimation();
@@ -120,10 +121,26 @@ export default function Contact() {
             <span className='bg-brand-blue/20 text-brand-blue border-brand-blue/30 inline-block rounded-full border px-4 py-1.5 text-xs font-semibold tracking-widest uppercase'>
               GET IN TOUCH
             </span>
-            <h2 className='text-4xl font-bold text-white md:text-5xl'>
-              Let's{' '}
-              <span className='text-brand-blue'>Connect & Collaborate</span>
-            </h2>
+            <div className='flex items-center justify-center gap-2 sm:gap-3'>
+              <Image
+                src={ConnectGif}
+                alt='Animated connection signal'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+              <h2 className='text-2xl font-bold text-white sm:text-4xl md:text-5xl'>
+                Let's{' '}
+                <span className='text-brand-blue'>Connect & Collaborate</span>
+              </h2>
+              <Image
+                src={ConnectGif}
+                alt='Animated connection signal'
+                width={56}
+                height={56}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+            </div>
             <div className='from-brand-blue to-brand-navy mx-auto h-1 w-20 rounded-full bg-gradient-to-r' />
           </AnimatedElement>
 

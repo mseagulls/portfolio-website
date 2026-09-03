@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedElement } from '@/components/AnimatedElement';
+import SpaceGif from '@/assets/SpaceGif.gif';
 
 const TECHNICAL_SKILLS = [
   { name: 'JavaScript', level: 90, category: 'Frontend' },
@@ -98,9 +99,25 @@ export default function Skills() {
             direction='up'
             className='space-y-4 text-center'
           >
-            <h2 className='text-brand-blue text-4xl font-bold md:text-5xl'>
-              Skills & Expertise
-            </h2>
+            <div className='flex items-center justify-center gap-2 sm:gap-3'>
+              <Image
+                src={SpaceGif}
+                alt='Animated space scene'
+                width={72}
+                height={72}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+              <h2 className='text-brand-blue text-2xl font-bold sm:text-4xl md:text-5xl'>
+                Skills & Expertise
+              </h2>
+              <Image
+                src={SpaceGif}
+                alt='Animated space scene'
+                width={72}
+                height={72}
+                className='h-11 w-11 shrink-0 object-contain md:h-14 md:w-14'
+              />
+            </div>
             <div className='from-brand-blue to-brand-navy mx-auto h-1 w-20 bg-gradient-to-r'></div>
           </AnimatedElement>
 
