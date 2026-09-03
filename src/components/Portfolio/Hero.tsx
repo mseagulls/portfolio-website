@@ -80,16 +80,16 @@ export default function Hero() {
               <motion.div variants={itemVariants} className='space-y-2'>
                 <motion.span
                   variants={itemVariants}
-                  className='text-brand-blue inline-block text-xs font-bold tracking-widest uppercase md:text-sm'
+                  className='inline-block text-[10px] font-bold tracking-[0.22em] text-emerald-300 uppercase sm:text-xs md:text-sm'
                 >
-                  FULL STACK ENGINEER × US ARMY VETERAN
+                  🌐 FULL STACK DEVELOPER ✮ US ARMY COMBAT VETERAN 🪖
                 </motion.span>
                 <motion.h1
                   variants={itemVariants}
-                  className='text-4xl leading-tight font-extrabold text-white md:text-6xl'
+                  className='text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl'
                 >
                   Hi, I'm{' '}
-                  <span className='text-brand-blue drop-shadow-[0_0_25px_rgba(13,0,164,0.6)]'>
+                  <span className='text-emerald-400 drop-shadow-[0_0_25px_rgba(16,185,129,0.45)]'>
                     Micah Peebles
                   </span>
                 </motion.h1>
@@ -97,14 +97,14 @@ export default function Hero() {
 
               <motion.p
                 variants={itemVariants}
-                className='text-lg leading-relaxed font-medium text-blue-200/90 md:text-xl'
+                className='text-lg leading-relaxed font-medium text-emerald-100/90 md:text-xl'
               >
                 Full Stack Developer & Former US Army Staff Sergeant
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
-                className='max-w-xl text-sm leading-relaxed text-violet-200/80 md:text-base'
+                className='max-w-xl text-sm leading-relaxed text-emerald-50/85 md:text-base'
               >
                 With 10+ years of military squad leadership and armored section
                 command experience, I bring extreme discipline, strategic
@@ -119,7 +119,7 @@ export default function Hero() {
                 {techBadges.map((tech) => (
                   <span
                     key={tech}
-                    className='border-brand-blue/30 bg-brand-blue/10 rounded-md border px-3 py-1 text-xs font-medium text-blue-200'
+                    className='rounded-md border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-100/90'
                   >
                     {tech}
                   </span>
@@ -181,26 +181,26 @@ export default function Hero() {
                 className='grid max-w-xl grid-cols-3 gap-4 border-t border-white/10 pt-8'
               >
                 <div>
-                  <p className='text-brand-blue text-2xl font-bold md:text-3xl'>
+                  <p className='text-2xl font-bold text-emerald-400 md:text-3xl'>
                     10+
                   </p>
-                  <p className='text-xs font-medium text-blue-200/80'>
+                  <p className='text-xs font-medium text-emerald-50/80'>
                     Years Leadership
                   </p>
                 </div>
                 <div>
-                  <p className='text-brand-blue text-2xl font-bold md:text-3xl'>
+                  <p className='text-2xl font-bold text-emerald-400 md:text-3xl'>
                     $10M+
                   </p>
-                  <p className='text-xs font-medium text-violet-200/80'>
+                  <p className='text-xs font-medium text-emerald-100/80'>
                     Assets Managed
                   </p>
                 </div>
                 <div>
-                  <p className='text-brand-blue text-2xl font-bold md:text-3xl'>
+                  <p className='text-2xl font-bold text-emerald-400 md:text-3xl'>
                     100%
                   </p>
-                  <p className='text-xs font-medium text-blue-200/80'>
+                  <p className='text-xs font-medium text-emerald-50/80'>
                     Mission Execution
                   </p>
                 </div>
@@ -212,30 +212,39 @@ export default function Hero() {
               variants={itemVariants}
               className='relative flex justify-center md:col-span-5 md:justify-end'
             >
-              <motion.div
-                className='border-brand-blue/40 hover:border-brand-blue/80 group relative h-80 w-64 overflow-hidden rounded-2xl border-2 shadow-2xl transition-all duration-500 md:h-[420px] md:w-80'
-                whileHover={{ scale: 1.03 }}
-              >
-                <Image
-                  src='/images/Corporate-Headshot.jpg'
-                  alt='Micah Peebles - Full Stack Developer'
-                  fill
-                  className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
-                  quality={90}
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent' />
+              <div className='relative'>
+                <div className='absolute -inset-8 rounded-[3rem] bg-emerald-400/15 blur-3xl' />
+                <div className='absolute -inset-3 rounded-[2.5rem] border border-emerald-300/30 bg-emerald-300/5 blur-2xl' />
 
-                {/* Floating Badge overlay */}
-                <div className='absolute right-4 bottom-4 left-4 space-y-1 rounded-xl border border-white/10 bg-black/60 p-3 text-xs backdrop-blur-md'>
-                  <div className='flex items-center gap-2 font-bold text-white'>
-                    <span className='text-brand-blue'>🛡️</span> US Army Staff
-                    Sergeant
+                <motion.div
+                  className='group relative h-[340px] w-[270px] overflow-hidden rounded-[2rem] border border-emerald-300/40 shadow-[0_0_35px_rgba(16,185,129,0.28),0_30px_80px_rgba(16,185,129,0.18)] transition-all duration-500 md:h-[500px] md:w-[390px]'
+                  whileHover={{ scale: 1.04, rotate: -1, y: -6 }}
+                  transition={{ type: 'spring', stiffness: 140, damping: 16 }}
+                >
+                  <div className='absolute inset-0 z-10 bg-gradient-to-br from-emerald-400/20 via-transparent to-black/25' />
+                  <div className='absolute inset-[8%] z-10 rounded-[1.5rem] border border-emerald-200/20' />
+                  <Image
+                    src='/images/Corporate-Headshot.jpg'
+                    alt='Micah Peebles - Full Stack Developer'
+                    fill
+                    className='object-cover object-center transition-transform duration-700 group-hover:scale-110'
+                    quality={95}
+                    sizes='(max-width: 768px) 270px, 390px'
+                  />
+                  <div className='absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-transparent to-transparent' />
+
+                  {/* Floating Badge overlay */}
+                  <div className='absolute right-4 bottom-4 left-4 z-20 space-y-1 rounded-xl border border-white/10 bg-black/60 p-3 text-xs backdrop-blur-md'>
+                    <div className='flex items-center gap-2 font-bold text-white'>
+                      <span className='text-emerald-400'>🛡️</span> US Army Staff
+                      Sergeant
+                    </div>
+                    <p className='text-[11px] text-emerald-50/80'>
+                      Certified Web Developer & JavaScript Specialist
+                    </p>
                   </div>
-                  <p className='text-[11px] text-blue-200/80'>
-                    Certified Web Developer & JavaScript Specialist
-                  </p>
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </div>

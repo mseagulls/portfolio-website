@@ -25,7 +25,6 @@ const PortfolioHeader = () => {
     { label: 'CLI Terminal', href: '/#terminal' },
     { label: 'Skills', href: '/#skills' },
     { label: 'Experience', href: '/#experience' },
-    { label: 'Recommendations', href: '/#testimonials' },
     { label: 'Contact', href: '/#contact' },
   ];
 
@@ -57,19 +56,19 @@ const PortfolioHeader = () => {
                 </span>
                 <span className='flex items-center gap-1 text-[10px] font-semibold text-emerald-400'>
                   <span className='h-1.5 w-1.5 animate-ping rounded-full bg-emerald-400' />
-                  Full Stack Engineer
+                  Full Stack Developer
                 </span>
               </div>
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className='hidden items-center gap-6 lg:flex'>
+          <nav className='hidden items-center gap-4 xl:flex xl:gap-6'>
             {navItems.map((item) => (
               <Link key={item.label} href={item.href}>
                 <motion.span
                   whileHover={{ y: -2 }}
-                  className='hover:text-brand-blue text-xs font-semibold tracking-wider text-blue-200/80 uppercase transition-colors duration-300'
+                  className='text-[10px] font-semibold tracking-wider text-emerald-200/85 uppercase transition-colors duration-300 hover:text-emerald-400 xl:text-xs'
                 >
                   {item.label}
                 </motion.span>
@@ -78,7 +77,7 @@ const PortfolioHeader = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className='hidden items-center gap-4 md:flex'>
+          <div className='hidden items-center gap-4 lg:flex'>
             <Link href='#contact'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -92,7 +91,7 @@ const PortfolioHeader = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className='rounded-lg border border-white/10 bg-white/5 p-2 text-white md:hidden'
+            className='rounded-lg border border-white/10 bg-white/5 p-2 text-white lg:hidden'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
@@ -124,7 +123,7 @@ const PortfolioHeader = () => {
               : { height: 0, opacity: 0 }
           }
           transition={{ duration: 0.3 }}
-          className='overflow-hidden rounded-b-2xl border-t border-white/10 bg-[#04052E]/95 backdrop-blur-xl md:hidden'
+          className='overflow-hidden rounded-b-2xl border-t border-white/10 bg-[#04052E]/95 backdrop-blur-xl lg:hidden'
         >
           <nav className='flex flex-col gap-2 p-6'>
             {navItems.map((item) => (

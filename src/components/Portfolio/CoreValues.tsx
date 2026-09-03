@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedElement } from '@/components/AnimatedElement';
@@ -85,8 +86,15 @@ export default function CoreValues() {
       ref={ref}
       className='relative overflow-hidden px-4 py-20 text-white md:px-8 md:py-32'
     >
-      {/* Background styling */}
-      <div className='absolute inset-0 -z-10 bg-[#04052E]'>
+      <div className='absolute inset-0 -z-10'>
+        <Image
+          src='/images/background.jpg'
+          alt='Abstract tech background'
+          fill
+          className='object-cover object-center opacity-50'
+          priority={false}
+        />
+        <div className='absolute inset-0 bg-[#04052E]/80' />
         <div className='absolute top-0 left-0 h-full w-full bg-[radial-gradient(#0D00A4_1px,transparent_1px)] [background-size:24px_24px] opacity-20' />
         <div className='bg-brand-navy/30 absolute top-1/2 left-0 -z-10 h-[400px] w-[400px] rounded-full blur-[140px]' />
       </div>
@@ -111,7 +119,7 @@ export default function CoreValues() {
               Core Principles &{' '}
               <span className='text-brand-blue'>Engineering Mindset</span>
             </h2>
-            <p className='mx-auto max-w-3xl text-base text-blue-200/80 md:text-lg'>
+            <p className='mx-auto max-w-3xl text-base text-emerald-50/80 md:text-lg'>
               How 10+ years as a US Army Staff Sergeant and Bradley Commander
               translate into high-performing, resilient software development.
             </p>
@@ -144,7 +152,7 @@ export default function CoreValues() {
                       </p>
                     </div>
                   </div>
-                  <span className='bg-brand-navy/60 border-brand-blue/30 rounded-full border px-3 py-1 text-xs font-semibold text-blue-200'>
+                  <span className='rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200'>
                     {val.badge}
                   </span>
                 </div>
@@ -155,16 +163,16 @@ export default function CoreValues() {
                     <span className='text-brand-blue text-[10px] font-bold tracking-wider uppercase'>
                       🎖️ Military Standard
                     </span>
-                    <p className='text-xs leading-relaxed text-blue-200/80'>
+                    <p className='text-xs leading-relaxed text-emerald-50/80'>
                       {val.militaryParallel}
                     </p>
                   </div>
 
                   <div className='bg-brand-blue/10 border-brand-blue/20 space-y-1 rounded-lg border p-4'>
-                    <span className='text-[10px] font-bold tracking-wider text-violet-300 uppercase'>
+                    <span className='text-[10px] font-bold tracking-wider text-emerald-300 uppercase'>
                       💻 Software Application
                     </span>
-                    <p className='text-xs leading-relaxed text-indigo-100/90'>
+                    <p className='text-xs leading-relaxed text-emerald-100/90'>
                       {val.softwareParallel}
                     </p>
                   </div>

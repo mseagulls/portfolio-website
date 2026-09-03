@@ -46,7 +46,7 @@ export default function PortfolioFooter() {
           <motion.div variants={itemVariants} className='space-y-4'>
             <h4 className='text-brand-blue text-lg font-bold'>Micah Peebles</h4>
             <p className='text-sm leading-relaxed text-violet-200/80'>
-              Full Stack Developer with 10+ years of military leadership
+              Full Stack Developer with 10+ years of military
               experience. Bringing discipline, precision, and excellence to web
               development.
             </p>
@@ -92,7 +92,7 @@ export default function PortfolioFooter() {
               >
                 +1 (231) 675-3155
               </a>
-              <p className='text-violet-200/80'>Pueblo, CO 81005</p>
+              <p className='text-violet-200/80'>Colorado, USA</p>
             </div>
           </motion.div>
         </motion.div>

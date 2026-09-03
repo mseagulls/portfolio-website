@@ -40,13 +40,13 @@ export default function Contact() {
 
   const contactMethods = [
     {
-      icon: '✉️',
+      icon: '📧',
       label: 'Email',
       value: 'mdspeebs@hotmail.com',
       href: 'mailto:mdspeebs@hotmail.com',
     },
     {
-      icon: '📱',
+      icon: '📲',
       label: 'Phone',
       value: '+1 (231) 675-3155',
       href: 'tel:+12316753155',

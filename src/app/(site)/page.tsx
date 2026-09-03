@@ -5,7 +5,6 @@ import CoreValues from '@/components/Portfolio/CoreValues';
 import InteractiveTerminal from '@/components/Portfolio/InteractiveTerminal';
 import Skills from '@/components/Portfolio/Skills';
 import Experience from '@/components/Portfolio/Experience';
-import Testimonials from '@/components/Portfolio/Testimonials';
 import Contact from '@/components/Portfolio/Contact';
 import { Metadata } from 'next';
 
@@ -27,7 +26,6 @@ export default function Home() {
       <InteractiveTerminal />
       <Skills />
       <Experience />
-      <Testimonials />
       <Contact />
     </>
   );

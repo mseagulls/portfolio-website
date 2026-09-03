@@ -6,6 +6,7 @@ import '@/styles/tailwind.css';
 import PortfolioHeader from '@/components/Header/PortfolioHeader';
 import PortfolioFooter from '@/components/Footer/PortfolioFooter';
 import ScrollToTop from '@/components/ScrollToTop';
+import FloatingUfo from '@/components/Portfolio/FloatingUfo';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import ToasterContext from '../context/ToastContext';
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
           <PortfolioFooter />
 
+          <FloatingUfo />
           <ToasterContext />
         </div>
 

@@ -212,7 +212,7 @@ export default function Experience() {
             >
               {[
                 { number: '10+', label: 'Years Military Service' },
-                { number: '50+', label: 'Soldiers Directly Led' },
+                { number: '10+', label: 'Soldiers Directly Led' },
                 { number: '$10M+', label: 'Equipment Managed' },
                 { number: '100%', label: 'Mission Success Rate' },
               ].map((stat, index) => (

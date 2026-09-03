@@ -71,12 +71,12 @@ export default function About() {
               <ScrollText
                 isVisible={isInView}
                 delay={0}
-                className='text-lg leading-relaxed text-blue-200/90'
+                className='text-lg leading-relaxed text-emerald-50/90'
               >
-                <p className='text-blue-200/90'>
+                <p className='text-emerald-50/90'>
                   My journey is one of purpose, discipline, and continuous
-                  growth. For 10+ years, I served as a Staff Sergeant in the
-                  U.S. Army, where I led squads of 5-10 soldiers, managed
+                  growth. I served as a Staff sergeant in the
+                  U.S. Army. As a squad leader of 10-15 soldiers, I managed
                   equipment valued at over $10 million, and developed critical
                   skills in operational planning, risk management, and
                   leadership.
@@ -86,10 +86,10 @@ export default function About() {
               <ScrollText
                 isVisible={isInView}
                 delay={0.2}
-                className='text-lg leading-relaxed text-indigo-100/90'
+                className='text-lg leading-relaxed text-emerald-100/90'
               >
                 <p>
-                  Whether as a Cavalry Scout or Bradley Commander, I learned
+                  I learned
                   that excellence isn't optional—it's a requirement. That same
                   mindset drives my approach to web development. I'm
                   detail-oriented, committed to quality, and always pushing
@@ -100,10 +100,10 @@ export default function About() {
               <ScrollText
                 isVisible={isInView}
                 delay={0.4}
-                className='text-lg leading-relaxed text-indigo-100/90'
+                className='text-lg leading-relaxed text-emerald-100/90'
               >
                 <p>
-                  Recently certified as a JavaScript Professional Developer and
+                  Certified as a JavaScript Professional Developer and
                   HTML-CSS Web Designer, I'm now channeling my passion for
                   problem-solving into building dynamic, responsive web
                   applications. I bring military precision and leadership
@@ -121,7 +121,7 @@ export default function About() {
               className='mt-12 border-t border-gray-700 pt-12'
             >
               <h3 className='text-brand-blue mb-8 text-2xl font-bold'>
-                My Core Values
+                Core Values
               </h3>
 
               <motion.div
