@@ -34,8 +34,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </span>
             <h3 className='text-3xl font-bold text-white'>Micah Peebles</h3>
             <p className='text-sm text-blue-200/80'>
-              Full Stack Developer & US Army Veteran (Staff Sergeant / Bradley
-              Commander)
+              Full Stack Developer & US Army Veteran (Staff Sergeant)
             </p>
             <p className='text-xs text-violet-200/70'>
               Pueblo, CO 81005 | mdspeebs@hotmail.com | +1 (231) 675-3155
@@ -48,7 +47,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               Professional Summary
             </h4>
             <p className='text-sm leading-relaxed text-blue-200/90'>
-              Full Stack Developer with 10+ years of military leadership
+              Full Stack Developer with 10 years of military
               experience. Certified in JavaScript and Web Design. Proven
               expertise leading squad operations, managing over $10M in
               high-value military equipment, and engineering responsive,
@@ -91,7 +90,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <div className='space-y-1 rounded-lg border border-white/5 bg-black/40 p-4'>
                 <div className='flex justify-between text-xs font-bold text-white'>
                   <span>Bradley Commander — U.S. Army</span>
-                  <span className='text-brand-blue'>Mar 2025 – Aug 2026</span>
+                  {/* <span className='text-brand-blue'>Mar 2025 – Aug 2026</span> */}
                 </div>
                 <ul className='list-inside list-disc space-y-1 pt-1 text-xs text-blue-200/80'>
                   <li>
@@ -107,13 +106,13 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
               <div className='space-y-1 rounded-lg border border-white/5 bg-black/40 p-4'>
                 <div className='flex justify-between text-xs font-bold text-white'>
-                  <span>Cavalry Scout / Squad Leader — U.S. Army</span>
-                  <span className='text-brand-blue'>May 2017 – Mar 2025</span>
+                  <span>Cavalry Scout — U.S. Army</span>
+                  {/* <span className='text-brand-blue'>May 2017 – Mar 2025</span> */}
                 </div>
                 <ul className='list-inside list-disc space-y-1 pt-1 text-xs text-blue-200/80'>
                   <li>
                     Managed accountability and maintenance for $10M+ in tactical
-                    equipment over 7+ years.
+                    equipment.
                   </li>
                   <li>
                     Led squad operations with a 100% mission completion rate and

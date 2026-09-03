@@ -25,8 +25,14 @@ export default function RootLayout({
     <html lang='en' className={plusJakarta.className}>
       <body className='bg-brand-black'>
         <div className='isolate'>
+          <a
+            href='#main-content'
+            className='focus:bg-brand-blue focus:text-brand-black sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-99999 focus:px-4 focus:py-2 focus:font-semibold'
+          >
+            Skip to content
+          </a>
           <NextTopLoader
-            color='#0D00A4'
+            color='#B8F36B'
             crawlSpeed={300}
             showSpinner={false}
             shadow='none'

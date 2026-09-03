@@ -33,7 +33,7 @@ export default function Hero() {
 
   const techBadges = [
     'React',
-    'Next.js 14',
+    'Next.js',
     'TypeScript',
     'Node.js',
     'Tailwind CSS',
@@ -53,7 +53,7 @@ export default function Hero() {
             priority
             quality={90}
           />
-          <div className='absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#02010A]'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0b0d0c]'></div>
         </div>
 
         {/* Content */}
@@ -82,7 +82,7 @@ export default function Hero() {
                   variants={itemVariants}
                   className='inline-block text-[10px] font-bold tracking-[0.22em] text-emerald-300 uppercase sm:text-xs md:text-sm'
                 >
-                  🌐 FULL STACK DEVELOPER ✮ US ARMY COMBAT VETERAN 🪖
+                  🌐 FULL STACK DEVELOPER ✮ US ARMY VETERAN 🪖
                 </motion.span>
                 <motion.h1
                   variants={itemVariants}
@@ -99,16 +99,17 @@ export default function Hero() {
                 variants={itemVariants}
                 className='text-lg leading-relaxed font-medium text-emerald-100/90 md:text-xl'
               >
-                Full Stack Developer & Former US Army Staff Sergeant
+                I build fast, dependable web products for people with work to
+                do.
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
                 className='max-w-xl text-sm leading-relaxed text-emerald-50/85 md:text-base'
               >
-                With 10+ years of military squad leadership and armored section
-                command experience, I bring extreme discipline, strategic
-                foresight, and technical precision to modern web applications.
+                Full Stack Developer and former US Army Staff Sergeant. I bring
+                ten years of operational leadership to thoughtful interfaces,
+                resilient systems, and teams that need clarity under pressure.
               </motion.p>
 
               {/* Tech Stack Pills */}
@@ -135,10 +136,10 @@ export default function Hero() {
                   <motion.button
                     whileHover={{
                       scale: 1.05,
-                      boxShadow: '0 0 30px rgba(13, 0, 164, 0.6)',
+                      boxShadow: '0 0 30px rgba(184, 243, 107, 0.35)',
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className='bg-brand-blue hover:bg-brand-navy w-full rounded-lg px-8 py-3.5 font-semibold text-white shadow-lg transition-colors duration-300 sm:w-auto'
+                    className='bg-brand-blue hover:bg-purple-light text-brand-black w-full rounded-lg px-8 py-3.5 font-semibold shadow-lg transition-colors duration-300 sm:w-auto'
                   >
                     Explore Projects →
                   </motion.button>

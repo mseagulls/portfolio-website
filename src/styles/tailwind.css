@@ -19,38 +19,38 @@
   --color-white: #ffffff;
 
   /* Brand Color Palette */
-  --color-brand-black: #02010a;
-  --color-brand-prussian: #04052e;
-  --color-brand-twilight: #140152;
-  --color-brand-navy: #22007c;
-  --color-brand-blue: #0d00a4;
+  --color-brand-black: #0b0d0c;
+  --color-brand-prussian: #121715;
+  --color-brand-twilight: #1b211d;
+  --color-brand-navy: #27362d;
+  --color-brand-blue: #b8f36b;
 
   /* Dark Theme - Backgrounds */
-  --color-dark: #02010a;
-  --color-dark-2: #04052e;
-  --color-dark-3: #140152;
-  --color-dark-4: #22007c;
-  --color-dark-5: #0d00a4;
-  --color-dark-6: #191625;
-  --color-dark-7: #0f0c1f;
-  --color-dark-8: #100d20;
+  --color-dark: #0b0d0c;
+  --color-dark-2: #121715;
+  --color-dark-3: #1b211d;
+  --color-dark-4: #27362d;
+  --color-dark-5: #b8f36b;
+  --color-dark-6: #202622;
+  --color-dark-7: #151a17;
+  --color-dark-8: #171d19;
 
   /* Accent Colors */
-  --color-purple: #0d00a4;
-  --color-purple-dark: #22007c;
-  --color-purple-dark-2: #140152;
-  --color-purple-light: #6366f1;
-  --color-purple-light-2: #818cf8;
-  --color-purple-light-3: #a5b4fc;
-  --color-purple-light-4: #c7d2fe;
-  --color-purple-light-5: #e0e7ff;
+  --color-purple: #b8f36b;
+  --color-purple-dark: #6c9344;
+  --color-purple-dark-2: #3b512e;
+  --color-purple-light: #d6ff9f;
+  --color-purple-light-2: #e4ffbd;
+  --color-purple-light-3: #efffd4;
+  --color-purple-light-4: #f5ffe5;
+  --color-purple-light-5: #f8ffef;
 
-  --color-pink: #0d00a4;
-  --color-pink-dark: #22007c;
-  --color-pink-light: #6366f1;
-  --color-pink-light-2: #818cf8;
-  --color-pink-light-3: #a5b4fc;
-  --color-pink-light-4: #c7d2fe;
+  --color-pink: #b8f36b;
+  --color-pink-dark: #6c9344;
+  --color-pink-light: #d6ff9f;
+  --color-pink-light-2: #e4ffbd;
+  --color-pink-light-3: #efffd4;
+  --color-pink-light-4: #f5ffe5;
 
   --text-heading-1: 60px;
   --text-heading-2: 48px;
@@ -151,25 +151,19 @@
   }
 
   body {
-    @apply bg-[#02010a] text-[#a9b6ff] antialiased;
+    @apply bg-[#0b0d0c] text-[#d5ded7] antialiased;
     background-image:
       radial-gradient(
-        circle at top left,
-        rgba(99, 102, 241, 0.18),
-        transparent 28%
+        circle at 12% 4%,
+        rgba(184, 243, 107, 0.1),
+        transparent 24%
       ),
       radial-gradient(
-        circle at bottom right,
-        rgba(168, 85, 247, 0.14),
-        transparent 26%
+        circle at 88% 76%,
+        rgba(76, 111, 83, 0.18),
+        transparent 28%
       ),
-      linear-gradient(
-        135deg,
-        #02010a 0%,
-        #04052e 30%,
-        #140152 62%,
-        #02010a 100%
-      );
+      linear-gradient(145deg, #0b0d0c 0%, #121715 48%, #0b0d0c 100%);
   }
 
   *,
@@ -181,8 +175,13 @@
   }
 
   ::selection {
-    background: rgba(129, 140, 248, 0.35);
-    color: #f5f3ff;
+    background: rgba(184, 243, 107, 0.35);
+    color: #f8ffef;
+  }
+
+  :focus-visible {
+    outline: 2px solid #b8f36b;
+    outline-offset: 4px;
   }
 }
 

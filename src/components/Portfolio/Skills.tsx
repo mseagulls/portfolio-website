@@ -222,23 +222,18 @@ export default function Skills() {
                     title: 'JavaScript Professional Developer',
                     issuer:
                       'Coalition of Information Technology Businesses (COITB)',
-                    date: 'July 2026 – July 2029',
+                    // date: 'July 2026 – July 2029',
                   },
                   {
                     title: 'HTML-CSS Web Designer',
                     issuer:
                       'Coalition of Information Technology Businesses (COITB)',
-                    date: 'June 2026 – June 2029',
-                  },
-                  {
-                    title: "Driver's License",
-                    issuer: 'State of Alaska',
-                    date: 'April 2023 – April 2030',
+                    // date: 'June 2026 – June 2029',
                   },
                   {
                     title: 'Staff Sergeant',
                     issuer: 'United States Army',
-                    date: 'Retired, August 2026',
+                    date: 'Retired, 2026',
                   },
                 ].map((cert, index) => (
                   <motion.div

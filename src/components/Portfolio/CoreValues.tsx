@@ -137,8 +137,8 @@ export default function CoreValues() {
               />
             </div>
             <p className='mx-auto max-w-3xl text-base text-emerald-50/80 md:text-lg'>
-              How 10+ years as a US Army Staff Sergeant and Bradley Commander
-              translate into high-performing, resilient software development.
+              How serving as a US Army soldier
+              translates into high-performing, resilient software development.
             </p>
             <div className='from-brand-blue to-brand-navy mx-auto h-1 w-20 rounded-full bg-gradient-to-r' />
           </AnimatedElement>

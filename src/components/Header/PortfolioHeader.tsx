@@ -32,7 +32,7 @@ const PortfolioHeader = () => {
     <motion.header
       className={`fixed top-0 left-0 z-1000 w-full transition-all duration-300 ${
         stickyMenu
-          ? 'border-b border-white/10 bg-[#02010A]/95 shadow-xl backdrop-blur-xl'
+          ? 'border-b border-white/10 bg-[#0b0d0c]/95 shadow-xl backdrop-blur-xl'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -47,14 +47,14 @@ const PortfolioHeader = () => {
               whileHover={{ scale: 1.05 }}
               className='flex items-center gap-3'
             >
-              <div className='from-brand-blue to-brand-navy shadow-brand-blue/30 border-brand-blue/40 flex h-10 w-10 items-center justify-center rounded-xl border bg-gradient-to-br font-bold text-white shadow-md'>
+              <div className='from-brand-blue to-brand-navy shadow-brand-blue/30 border-brand-blue/40 text-brand-black flex h-10 w-10 items-center justify-center rounded-xl border bg-gradient-to-br font-bold shadow-md'>
                 MP
               </div>
               <div className='hidden flex-col sm:flex'>
                 <span className='text-base leading-tight font-bold text-white'>
                   Micah Peebles
                 </span>
-                <span className='flex items-center gap-1 text-[10px] font-semibold text-emerald-400'>
+                <span className='text-brand-blue flex items-center gap-1 text-[10px] font-semibold'>
                   <span className='h-1.5 w-1.5 animate-ping rounded-full bg-emerald-400' />
                   Full Stack Developer
                 </span>
@@ -68,7 +68,7 @@ const PortfolioHeader = () => {
               <Link key={item.label} href={item.href}>
                 <motion.span
                   whileHover={{ y: -2 }}
-                  className='text-[10px] font-semibold tracking-wider text-emerald-200/85 uppercase transition-colors duration-300 hover:text-emerald-400 xl:text-xs'
+                  className='hover:text-brand-blue text-[10px] font-semibold tracking-wider text-lime-100/75 uppercase transition-colors duration-300 xl:text-xs'
                 >
                   {item.label}
                 </motion.span>
@@ -82,7 +82,7 @@ const PortfolioHeader = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='bg-brand-blue hover:bg-brand-navy shadow-brand-blue/30 rounded-lg px-5 py-2 text-xs font-semibold text-white shadow-md transition-all duration-300'
+                className='bg-brand-blue hover:bg-purple-light shadow-brand-blue/30 text-brand-black rounded-lg px-5 py-2 text-xs font-semibold shadow-md transition-all duration-300'
               >
                 Let's Talk
               </motion.button>
@@ -91,7 +91,11 @@ const PortfolioHeader = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className='rounded-lg border border-white/10 bg-white/5 p-2 text-white lg:hidden'
+            aria-label={
+              mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
+            }
+            aria-expanded={mobileMenuOpen}
+            className='hover:border-brand-blue/50 hover:text-brand-blue rounded-lg border border-white/10 bg-white/5 p-2 text-white transition-colors lg:hidden'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
@@ -123,7 +127,7 @@ const PortfolioHeader = () => {
               : { height: 0, opacity: 0 }
           }
           transition={{ duration: 0.3 }}
-          className='overflow-hidden rounded-b-2xl border-t border-white/10 bg-[#04052E]/95 backdrop-blur-xl lg:hidden'
+          className='overflow-hidden rounded-b-2xl border-t border-white/10 bg-[#121715]/95 backdrop-blur-xl lg:hidden'
         >
           <nav className='flex flex-col gap-2 p-6'>
             {navItems.map((item) => (
