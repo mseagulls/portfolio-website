@@ -10,14 +10,13 @@ const EXPERIENCES = [
   {
     role: 'Bradley Commander',
     company: 'U.S. Army',
-    // period: 'March 2025 – August 2026',
     duration: '~2 years',
     highlights: [
       'Led a section comprising two squads, each consisting of 5-10 soldiers',
       'Developed successful military engagement strategies in collaboration with other commanders',
       'Ensured compliance with safety regulations throughout all training exercises and missions',
       'Maintained composure while managing injuries and emergencies',
-    //   'Operated effectively during work shifts exceeding 24 hours',
+      //   'Operated effectively during work shifts exceeding 24 hours',
       'Supervised loading and unloading of armored vehicles for site relocation',
       'Handled operation of tanks and armored vehicles across diverse field conditions',
     ],
@@ -26,7 +25,6 @@ const EXPERIENCES = [
   {
     role: 'Cavalry Scout',
     company: 'U.S. Army',
-    // period: 'May 2017 – March 2025',
     duration: '~8 years',
     highlights: [
       'Led teams of 3-5 soldiers with 100% mission completion rate',
@@ -36,7 +34,7 @@ const EXPERIENCES = [
       'Assessed team readiness through periodic skill evaluations and drills',
       'Maintained accurate records of personnel actions and performance metrics',
       'Ensured workplace cleanliness and safety protocols across all operations',
-    //   'Operated tracked and wheeled vehicles across varied terrain',
+      //   'Operated tracked and wheeled vehicles across varied terrain',
     ],
     type: 'Military',
   },
@@ -170,9 +168,7 @@ export default function Experience() {
                       </div>
 
                       {/* Timeline info */}
-                      <div className='mb-4 flex flex-col gap-2 text-sm text-gray-400 md:flex-row md:gap-4'>
-                        <span>{exp.period}</span>
-                        <span className='hidden md:inline'>•</span>
+                      <div className='mb-4 text-sm text-gray-400'>
                         <span>{exp.duration}</span>
                       </div>
 
